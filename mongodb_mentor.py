@@ -26,7 +26,7 @@ except (ConnectionFailure, ServerSelectionTimeoutError) as e:
     print(f"Mentor MongoDB connection failed: {e}")
     client = None
 
-db = client.get_database() if client else None
+db = client.get_database() if client is not None else None
 
 # ─── Collections ──────────────────────────────────────────────────────────────
 # mentor_journal.reflections   – dated journal entries
@@ -41,7 +41,7 @@ def _ts():
 
 
 def _col(name: str):
-    return db[name] if db else None
+   return db[name] if db is not None else None
 
 
 # ─── Reflections ──────────────────────────────────────────────────────────────
