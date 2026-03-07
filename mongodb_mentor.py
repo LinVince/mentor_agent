@@ -13,9 +13,10 @@ if not DB_PASSWORD:
 
 MONGO_URI = (
     f"mongodb+srv://vincejim91126_db_user:{DB_PASSWORD}"
-    "@watchlist.l0q1rbv.mongodb.net/mentor_journal"
-    "?retryWrites=true&w=majority&appName=watchlist"
+    "@mentordb.7m1yabo.mongodb.net/mentor_journal"
+    "?retryWrites=true&w=majority&appName=mentordb"
 )
+
 
 try:
     client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
