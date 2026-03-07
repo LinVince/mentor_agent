@@ -201,7 +201,7 @@ def get_weekly_summary(year: int = None, week: int = None) -> dict:
 
     def _fetch(collection_name):
         col = _col(collection_name)
-        return list(col.find(query, {"_id": 0}).sort("created_at", 1)) if col else []
+        return list(col.find(query, {"_id": 0}).sort("created_at", 1)) if col is not None else []
 
     return {
         "year":        target_year,
