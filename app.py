@@ -21,7 +21,7 @@ app = Flask(__name__)
 # ── LINE credentials ── replace with real values ──────────────────────────────
 CHANNEL_ACCESS_TOKEN = "TobskshErd4xjtvjO/eMwJ/twpRtTuuEOl9OFwaBMMBVqHVxowRAhJrTH13eHU5soYQ/kBjud5WZv+mk0BDJ3Fm6XDWf3b3e1nYeW7hWFolrmFuo5AEfBkhUiVBPiyMwYXsYQkbWRF7HpO02D3TxxgdB04t89/1O/w1cDnyilFU="
 CHANNEL_SECRET       = "bccb6b4002087fdcd5dd481ac2383cfc"
-DEFAULT_USER_ID      = "YU192772f59a4321d51d8b084fde86748d"
+DEFAULT_USER_ID      = "U192772f59a4321d51d8b084fde86748d"
 # ──────────────────────────────────────────────────────────────────────────────
 
 config      = Configuration(access_token=CHANNEL_ACCESS_TOKEN)
