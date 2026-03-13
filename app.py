@@ -61,15 +61,14 @@ def callback():
 def handle_message(event):
     user_text   = event.message.text
     reply_token = event.reply_token
-
+    reply = get_response_from_agent(user_text)
     # Acknowledge immediately to avoid LINE timeout
     line_bot_api.reply_message(
         ReplyMessageRequest(
             reply_token=reply_token,
-            messages=[TextMessage(text="Thinking... give me a moment.")],
+            messages=[TextMessage(text=reply)],
         )
-    )
-
+    """
     def process():
         try:
             reply = get_response_from_agent(user_text)
@@ -86,7 +85,7 @@ def handle_message(event):
         )
 
     threading.Thread(target=process, daemon=True).start()
-
+"""
 
 # ══════════════════════════════════════════════════════════════
 #  REST  /prompt  (for testing or external triggers)
