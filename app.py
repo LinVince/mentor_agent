@@ -68,6 +68,7 @@ def handle_message(event):
             reply_token=reply_token,
             messages=[TextMessage(text=reply)],
         )
+    )
     """
     def process():
         try:
