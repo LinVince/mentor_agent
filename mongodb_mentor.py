@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DB_PASSWORD = os.environ.get("MONGO_DB_PASSWORD")
-
+print("DEBUG ENV VALUE:", os.environ.get("MONGO_DB_PASSWORD"))
 if not DB_PASSWORD:
     raise ValueError("MONGO_DB_PASSWORD environment variable not set.")
 
